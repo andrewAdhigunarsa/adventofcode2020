@@ -36,11 +36,13 @@ function day8(data){
 
         while(i < processedData.length){
 
+            let {type,arg}=processedData[i];
+
             if(i === swappedIndex){
-                if(processedData[i].type === 'nop'){
-                    processedData[i].type = 'jmp';
-                }else if(processedData[i].type === 'jmp'){
-                    processedData[i].type = 'nop';
+                if(type === 'nop'){
+                    type = 'jmp';
+                }else if(type === 'jmp'){
+                    type= 'nop';
                 }
             }
 
@@ -52,12 +54,12 @@ function day8(data){
 
             visited[i] = true;
 
-            if(processedData[i].type === 'jmp'){
-                i+= processedData[i].arg;  
-            }else if(processedData[i].type === 'acc'){
-                accumulator+=processedData[i].arg;
+            if(type === 'jmp'){
+                i+= arg;  
+            }else if(type === 'acc'){
+                accumulator+=arg;
                 i++  
-            }else if(processedData[i].type === 'nop'){
+            }else if(type === 'nop'){
                 i++    
             } 
 
@@ -73,9 +75,10 @@ function day8(data){
 
 
     while(index<processedData.length){
-    
 
-        if(processedData[index].type === 'jmp' || processedData[index].type === 'nop'){
+        let {type,arg}=processedData[index];
+
+        if(type === 'jmp' || type === 'nop'){
             const {canTerminate, accumulator} = checkStatus(index,fAccumulator);
             if(canTerminate){
                 console.log(processedData);
@@ -84,12 +87,12 @@ function day8(data){
             }
         }
 
-        if(processedData[index].type === 'jmp'){
-            index+=processedData[index].arg;  
-        }else if(processedData[index].type === 'acc'){
-            fAccumulator+=processedData[index].arg;
+        if(type === 'jmp'){
+            index+=arg;  
+        }else if(type === 'acc'){
+            fAccumulator+=arg;
             index++  
-        }else if(processedData[index].type === 'nop'){
+        }else if(type === 'nop'){
             index++    
         } 
     }
