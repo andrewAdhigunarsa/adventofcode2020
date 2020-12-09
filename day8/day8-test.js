@@ -30,19 +30,6 @@ function day8(data){
         }
     })
     
-    const t = rawData.map((e)=>{
-        const a = e.split(' ');
-        const b = a[0];
-        const c = parseInt(a[1]);
-        return{
-            type:b,
-            arg:c
-        }
-    })
-
-
-    console.log(processedData);
-
     function checkStatus(swappedIndex,accumulator){
         let visited={};
         let i = swappedIndex;
