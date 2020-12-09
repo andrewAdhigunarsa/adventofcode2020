@@ -29,10 +29,19 @@ function day8(data){
             arg:c
         }
     })
+    
+    const t = rawData.map((e)=>{
+        const a = e.split(' ');
+        const b = a[0];
+        const c = parseInt(a[1]);
+        return{
+            type:b,
+            arg:c
+        }
+    })
+
 
     console.log(processedData);
-
-
 
     function checkStatus(swappedIndex,accumulator){
         let visited={};
@@ -77,6 +86,7 @@ function day8(data){
 
 
     while(index<processedData.length){
+    
 
         if(processedData[index].type === 'jmp' || processedData[index].type === 'nop'){
             const {canTerminate, accumulator} = checkStatus(index,fAccumulator);
