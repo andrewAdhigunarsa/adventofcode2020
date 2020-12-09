@@ -62,8 +62,6 @@ function day7(data){
 
 
     function rec(color){
-
-        console.log(color)
         
         let x = findRule(color, processData);
   
@@ -73,8 +71,6 @@ function day7(data){
 
         let children = x.children;
 
-        console.log(children)
-
         let n =0;
 
         if(children){
@@ -82,8 +78,6 @@ function day7(data){
                 n+= children[a].total + (children[a].total * rec(children[a].bag))
             }
         }
-        
-       console.log(n) 
        return n;
 
     }
