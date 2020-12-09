@@ -30,6 +30,8 @@ function day8(data){
         }
     })
 
+    console.log(processedData);
+
 
 
     function checkStatus(swappedIndex,accumulator){
@@ -62,6 +64,7 @@ function day8(data){
             }else if(processedData[i].type === 'nop'){
                 i++    
             } 
+
         }
         console.log({ canTerminate: true, accumulator});
         return { canTerminate: true, accumulator}
