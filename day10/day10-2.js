@@ -18,7 +18,7 @@ function day10(data){
         return listArray;
     }
 
-     const rawData = processedString(data, /\n/);
+    const rawData = processedString(data, /\n/);
     const xdata= rawData.sort((a, b) => a - b);
     let processedData = xdata.map(e=>parseInt(e));
     processedData.push((processedData[processedData.length-1]+3))
