@@ -242,9 +242,6 @@ function day11(data){
             switching.push(shouldSwitchNumber(d,list[d],list));
         }
 
-        // console.log(memo);
-        // console.log(list);
-        // console.log(switching);
         let occupied =0;
 
         for(let b=0; b<switching.length; b++){
@@ -276,28 +273,6 @@ function day11(data){
     convertSeats(processedData1);
     
 
-        // checkHorizontal(lineIndex,line)
-        // checkVertical(lineIndex,arrayIndex,fullArray)
-        // checkDiagonalForward(lineIndex,arrayIndex,fullArray)
-        // checkDiagonalBackward(lineIndex,arrayIndex,fullArray)
-
-
-    // console.log(processedData1);
-//     console.log(checkHorizontal(3,4,
-// [ [ 'L', '.', 'L', 'L', '.', 'L', 'L', '.', 'L', 'L' ],
-//   [ '#', 'L', 'L', 'L', 'L', 'L', 'L', '.', 'L', 'L' ],
-//   [ 'L', '.', 'L', '.', 'L', '.', '.', 'L', '.', '.' ],
-//   [ 'L', 'L', 'L', 'L', '#', 'L', 'L', '.', 'L', 'L' ],
-//   [ 'L', '.', '#', 'x', '.', 'L', 'L', '.', 'L', 'L' ],
-//   [ 'L', '.', '#', 'L', '.', 'L', 'L', '.', 'L', 'L' ],
-//   [ '.', '.', 'L', '.', 'L', '#', '.', '.', '.', '.' ],
-//   [ 'L', 'L', 'L', 'L', 'L', 'L', 'L', 'L', 'L', 'L' ],
-//   [ 'L', '.', 'L', 'L', 'L', 'L', 'L', 'L', '.', 'L' ],
-//   [ 'L', '.', 'L', 'L', 'L', 'L', 'L', '.', 'L', 'L' ] ]))
-
-
-
-    // console.log(checkHorizontal(3,[ '#', '.', '#', 'L', '.', 'L', '#', '.', 'L', 'L' ]))
 
 }
 
